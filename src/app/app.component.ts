@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   birthday = new Date(1991 , 6 , 30);
   toggle: boolean;
+  data: any[];
   constructor() {
+    this.data = [];
   }
   get format(){
     return this.toggle ? 'shortDate' : 'fullDate';

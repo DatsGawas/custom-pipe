@@ -1,13 +1,23 @@
 
 <!--Simple date pipe-->
-<h1>Date : {{birthday | date}}</h1>
+<h3>Date : {{birthday | date}}</h3>
 
 <!--date with custom parameter-->
 
-<h1>Date : {{birthday | date:format | uppercase}}</h1>
+<h3>Date : {{birthday | date:format | uppercase}}</h3>
 <button (click)="toggleDateFormat()">Toggle</button>
 
 
 <!--Custom Pipe-->
-<h2>Power Booster</h2>
-<p>Super power boost: {{2 | custom: 10}}</p>
+<h3>Custom Pipe</h3>
+<h5>value 2 and 10  </h5>
+<p>Power Calculator: {{2 | custom: 10}}</p>
+
+
+<!--Async Pipe Data-->
+
+<h4>Async pipe -----  Sport List : </h4>
+<div *ngFor="let sport of ('./assets/data/sports.json' | fetch) ">
+  {{sport.sportName}}
+</div>
+
