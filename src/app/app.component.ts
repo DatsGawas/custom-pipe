@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  birthday = new Date(1991 , 6 , 30);
+  toggle: boolean;
+  constructor() {
+  }
+  get format(){
+    return this.toggle ? 'shortDate' : 'fullDate';
+  }
+  toggleDateFormat() {
+    this.toggle = !this.toggle;
+  }
 }
